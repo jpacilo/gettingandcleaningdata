@@ -25,6 +25,3 @@ When performing the analysis, make sure your working directory contains the foll
 The tidy data output of my work is in this repo.
 https://github.com/jpacilo/gettingandcleaningdata/blob/master/tidy_data.txt
 
-To view this in R:
-tidy_data <- read.table('tidy_data.txt', header = TRUE)
-View(tidy_data)
