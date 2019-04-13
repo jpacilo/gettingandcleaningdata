@@ -39,43 +39,38 @@ Write a script <run_analysis.R> capable of doing the following on the UCI HAR Da
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-## Methodology Overview
-Here is my take on answering the programming assignment in getting and cleaning data of coursera's ds specialization.
-1. Load the datasets.
-  a. activity_labels
-  b. features
-  c. training data
-  d. testing data
-2. Clean the datasets.
-3. Bind the train and test data.
-4. Melt the merged train-test data.
-5. Cast the molten data to get the tidy-ed dataset.
-6. Write out the tidy dataset.
+## Variables
+1. activity_labels
+    two column df describing the six activities
+2. features
+    two column df describing the features
+3. features_wanted
+    the features wanted are variables containing the words mean and std
+4. measurements
+    the corresponding measurements from features_wanted
+5. measurements_wanted
+    just cleaned version of #4 deleted the () bit
+6. train_x
+    the x vars from the train dataset
+7. train_activities
+    the six activities encoded from 1-6
+8. train_subjects
+    the subject number
+9. train
+    binded the three dfs above
+10. test_x
+    the x vars from the test dataset
+11. test_activities
+    the six activities encoded from 1-6
+12. test_subjects
+    the subject number
+13. test
+    binded the three dfs above
+14. train_test
+    merged the train and test dfs
+15. train_test_melt
+    melted the train_test df to prepare as an input in the casting
+16. train_test_cast
+    used to aggregate and apply a mean function
 
-
-## Load the dataset
-I used the read.table function
-
-
-## Clean the datasets
-1. Use appropriate labels for the columns
-2. I used the grep function in R to isolate the names in the features column containing the words: mean and std
-3. I used the gsub function to delete the unnecessary () in the variable names.
-
-
-## Bind the train and test data
-I used rbind to merge the train and test datasets. When performing this, make sure that the two datasets have the same number of columns.
-
-
-## Melt the merged train-test data 
-I used the melt function to compress the dataset into a narrow form as this is the input needed in the casting.
-
-
-## Cast the molten data
-1. I used the dcast function to reshpae the molten dataset, and applied a mean aggregating function
-2. The resulting dimensions of the dataset is 180 x 68
-
-
-## Write out the tidy version
-I used the write.table function to write out the tidy data as a txt file with an argument <row.names = FALSE> as indicated in the instructions.
 
