@@ -1,6 +1,6 @@
 ## Getting and Cleaning Data
 Author: Joshua Paolo Acilo 
-Github: @jpacilo
+
 
 ### What is this?
 This codebook describes the variables, the data, and the transformations done on the UCI HAR Dataset.
