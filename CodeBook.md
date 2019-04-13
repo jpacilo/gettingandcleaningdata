@@ -76,6 +76,6 @@ I used the melt function to compress the dataset into a narrow form as this is t
 2. The resulting dimensions of the dataset is 180 x 68
 
 
-## Write out the tidy version. 
+## Write out the tidy version
 I used the write.table function to write out the tidy data as a txt file with an argument <row.names = FALSE> as indicated in the instructions.
 
