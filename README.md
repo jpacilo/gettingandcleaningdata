@@ -13,7 +13,7 @@ Write a script <run_analysis.R> capable of doing the following on the UCI HAR Da
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-## Methodology Overview
+## Methodology
 Here is my take on answering the programming assignment in getting and cleaning data of coursera's ds specialization.
 1. Load the datasets.
   a. activity_labels
