@@ -16,11 +16,14 @@ library(reshape2)
 
 activity_labels <- read.table('UCI HAR Dataset/activity_labels.txt', col.names = c('Label', 'Activity'))
 features <- read.table('UCI HAR Dataset/features.txt', col.names = c('Index', 'Name'))
-features_wanted <- grep("(mean|std)\\(\\)", features$Name)
+#features_wanted <- grep("(mean|std)\\(\\)", features$Name)
+features_wanted <- sort(c(grep("mean()", features$Name), grep("std()", features$Name)))
 measurements <- features[features_wanted,]$Name
 measurements_wanted <- gsub('[()]', '', measurements)
 # grep fnc is used here to find varnames containing the words mean or std
 # gsub fnc is used here to delete the () character in between varnames 
+      # sort(c(grep("mean()", colnames(totaldata)), grep("std()", colnames(totaldata)))))
+      
 
 
 train_x <- read.table("UCI HAR Dataset/train/X_train.txt")[, features_wanted]
@@ -47,11 +50,20 @@ train_test <- rbind(train, test)
   train_test$Activity <- as.factor(train_test$Activity)
 train_test_melt <- melt(data = train_test, id = c('Subject', 'Activity'))
 train_test_cast <- dcast(data = train_test_melt, Subject + Activity ~ variable, fun.aggregate = mean) 
+  colnames(train_test_cast) <- gsub("^f", "frequencyDomain", colnames(train_test_cast))
+  colnames(train_test_cast) <- gsub("^t", "timeDomain", colnames(train_test_cast))
+  colnames(train_test_cast) <- gsub("Acc", "Accelerometer", colnames(train_test_cast))
+  colnames(train_test_cast) <- gsub("Gyro", "Gyroscope", colnames(train_test_cast))
+  colnames(train_test_cast) <- gsub("Mag", "Magnitude", colnames(train_test_cast))
+  colnames(train_test_cast) <- gsub("Freq", "Frequency", colnames(train_test_cast))
+  colnames(train_test_cast) <- gsub("mean", "Mean", colnames(train_test_cast))
+  colnames(train_test_cast) <- gsub("std", "StandardDeviation", colnames(train_test_cast))
 # rbind is used to merge the train and test dfs
 # mapvalues fnc is used to map the numeric values of activity var to its respective char name
 # subject and activity col is changed to factor data type 
 # melt fnc is used to compress the dataset in long format, led by the subject and activity var
 # dcast fnc is used to reshape and aggregate the molten dataset and to apply a mean fnc to it
+# gsub is used to expand the abbreviations in the feature names
   
 
 write.table(train_test_cast, file = 'tidy_data.txt', row.names = FALSE)
@@ -60,4 +72,6 @@ write.table(train_test_cast, file = 'tidy_data.txt', row.names = FALSE)
 ## How to read and view this file?
 ## tidy_data <- read.table('tidy_data.txt', header = TRUE)
 ## View(tidy_data)
+
+
 
