@@ -127,13 +127,8 @@ The resulting tidy dataset has 180 observations and 81 variables. The first two 
 ### THE TRANSFORMATIONS
 The transformations done from the raw dataset to the tidy-ed dataset is indicated in this section.
 
-1. grep
-   used to locate the indices of the data containing the keywords: mean and std
-2. gsub
-   used to replace the unwanted () in the dataset
-3. rbind and cbind
-   used to bind the train dataset and test dataset individually first, then them together
-4. melt
-   used to shape the dataset in a long format; this is the input shape needed in casting
-5. dcast
-   used to reshape the molten dataset; a mean aggregating function is applied in this part
+1. grep is used to locate the indices of the data containing the keywords: mean and std
+2. gsub is used to replace the unwanted () in the dataset
+3. rbind and cbind are used to bind the train dataset and test dataset individually first, then them together
+4. melt is used to shape the dataset in a long format; this is the input shape needed in casting
+5. dcast is used to reshape the molten dataset; a mean aggregating function is applied in this part
