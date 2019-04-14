@@ -38,39 +38,147 @@ Write a script <run_analysis.R> capable of doing the following on the UCI HAR Da
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-
+    
 ## Variables
-1. activity_labels
-    two column df describing the six activities
-2. features
-    two column df describing the features
-3. features_wanted
-    the features wanted are variables containing the words mean and std
-4. measurements
-    the corresponding measurements from features_wanted
-5. measurements_wanted
-    just cleaned version of #4 deleted the () bit
-6. train_x
-    the x vars from the train dataset
-7. train_activities
-    the six activities encoded from 1-6
-8. train_subjects
-    the subject number
-9. train
-    binded the three dfs above
-10. test_x
-    the x vars from the test dataset
-11. test_activities
-    the six activities encoded from 1-6
-12. test_subjects
-    the subject number
-13. test
-    binded the three dfs above
-14. train_test
-    merged the train and test dfs
-15. train_test_melt
-    melted the train_test df to prepare as an input in the casting
-16. train_test_cast
-    used to aggregate and apply a mean function
+The resulting tidy dataset has 180 observations and 68 variables. The first two features indicate the ID of the subject and the activity performed which are encoded as numbers. I have listed below all the variables in the tidy-ed dataset. All the features indicated below (aside from the first two) are measurements in terms of mean and standard deviation.
+
+1 
+Subject
+The subject ID encoded from 1 - 30
+2 
+Activity
+The activity performed encoded from 1 - 6
+3
+tBodyAcc-mean-X
+4
+tBodyAcc-mean-Y
+5
+tBodyAcc-mean-Z
+6
+tBodyAcc-std-X
+7
+tBodyAcc-std-Y
+8
+tBodyAcc-std-Z
+9
+tGravityAcc-mean-X
+10
+tGravityAcc-mean-Y
+11
+tGravityAcc-mean-Z
+12
+tGravityAcc-std-X
+13
+tGravityAcc-std-Y
+14
+tGravityAcc-std-Z
+15
+tBodyAccJerk-mean-X
+16
+tBodyAccJerk-mean-Y
+17
+tBodyAccJerk-mean-Z
+18
+tBodyAccJerk-std-X
+19
+tBodyAccJerk-std-Y
+20
+tBodyAccJerk-std-Z
+21
+tBodyGyro-mean-X
+22
+tBodyGyro-mean-Y
+23
+tBodyGyro-mean-Z
+24
+tBodyGyro-std-X
+25
+tBodyGyro-std-Y
+26
+tBodyGyro-std-Z
+27
+tBodyGyroJerk-mean-X
+28
+tBodyGyroJerk-mean-Y
+29
+tBodyGyroJerk-mean-Z
+30
+tBodyGyroJerk-std-X
+31
+tBodyGyroJerk-std-Y
+32
+tBodyGyroJerk-std-Z
+33
+tBodyAccMag-mean
+34
+tBodyAccMag-std
+35
+tGravityAccMag-mean
+36
+tGravityAccMag-std
+37
+tBodyAccJerkMag-mean
+38
+tBodyAccJerkMag-std
+39
+tBodyGyroMag-mean
+40
+tBodyGyroMag-std
+41
+tBodyGyroJerkMag-mean
+42
+tBodyGyroJerkMag-std
+43
+fBodyAcc-mean-X
+44
+fBodyAcc-mean-Y
+45
+fBodyAcc-mean-Z
+46
+fBodyAcc-std-X
+47
+fBodyAcc-std-Y
+48
+fBodyAcc-std-Z
+49
+fBodyAccJerk-mean-X
+50
+fBodyAccJerk-mean-Y
+51
+fBodyAccJerk-mean-Z
+52
+fBodyAccJerk-std-X
+53
+fBodyAccJerk-std-Y
+54
+fBodyAccJerk-std-Z
+55
+fBodyGyro-mean-X
+56
+fBodyGyro-mean-Y
+57
+fBodyGyro-mean-Z
+58
+fBodyGyro-std-X
+59
+fBodyGyro-std-Y
+60
+fBodyGyro-std-Z
+61
+fBodyAccMag-mean
+62
+fBodyAccMag-std
+63
+fBodyBodyAccJerkMag-mean
+64
+fBodyBodyAccJerkMag-std
+65
+fBodyBodyGyroMag-mean
+66
+fBodyBodyGyroMag-std
+67
+fBodyBodyGyroJerkMag-mean
+68
+fBodyBodyGyroJerkMag-std
 
 
