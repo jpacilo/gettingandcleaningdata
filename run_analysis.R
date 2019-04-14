@@ -16,15 +16,12 @@ library(reshape2)
 
 activity_labels <- read.table('UCI HAR Dataset/activity_labels.txt', col.names = c('Label', 'Activity'))
 features <- read.table('UCI HAR Dataset/features.txt', col.names = c('Index', 'Name'))
-#features_wanted <- grep("(mean|std)\\(\\)", features$Name)
 features_wanted <- sort(c(grep("mean()", features$Name), grep("std()", features$Name)))
 measurements <- features[features_wanted,]$Name
 measurements_wanted <- gsub('[()]', '', measurements)
 # grep fnc is used here to find varnames containing the words mean or std
 # gsub fnc is used here to delete the () character in between varnames 
-      # sort(c(grep("mean()", colnames(totaldata)), grep("std()", colnames(totaldata)))))
       
-
 
 train_x <- read.table("UCI HAR Dataset/train/X_train.txt")[, features_wanted]
   names(train_x) <- measurements_wanted
