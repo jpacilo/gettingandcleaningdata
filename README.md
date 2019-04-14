@@ -4,7 +4,7 @@ Tidying up the UCI HAR Dataset
 Author: Joshua Paolo Acilo
 
 ## Task
-Write a script <run_analysis.R> capable of doing the following on the UCI HAR Dataset.
+Write a script run_analysis.R capable of doing the following on the UCI HAR Dataset.
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -46,7 +46,7 @@ I used the melt function to compress the dataset into a narrow form as this is t
 
 
 ## Cast the molten data
-1. I used the dcast function to reshpae the molten dataset, and applied a mean aggregating function
+1. I used the dcast function to reshape the molten dataset, and applied a mean aggregating function
 2. The resulting dimensions of the dataset is 180 x 68
 
 
