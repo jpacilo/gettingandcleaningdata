@@ -42,74 +42,91 @@ Write a script <run_analysis.R> capable of doing the following on the UCI HAR Da
 ## Variables
 The resulting tidy dataset has 180 observations and 68 variables. The first two features indicate the ID of the subject and the activity performed which are encoded as numbers. I have listed below all the variables in the tidy-ed dataset. All the features indicated below (aside from the first two) are measurements in terms of mean and standard deviation.
 
-- (The subject ID encoded from 1 to 30)
+- The subject ID encoded from 1 to 30
 1. Subject 
-- (The activity performed encoded from 1 to 6)
+- The activity performed encoded from 1 to 6
 2. Activity 
+- Time Body Accelerometer Measurements
 3. tBodyAcc-mean-X
 4. tBodyAcc-mean-Y
 5. tBodyAcc-mean-Z
 6. tBodyAcc-std-X
 7. tBodyAcc-std-Y
 8. tBodyAcc-std-Z
+- Time Gravity Accelerometer Measurements
 9. tGravityAcc-mean-X
 10. tGravityAcc-mean-Y
 11. tGravityAcc-mean-Z
 12. tGravityAcc-std-X
 13. tGravityAcc-std-Y
 14. tGravityAcc-std-Z
+- Time Body Accelerometer Jerk Measurements
 15. tBodyAccJerk-mean-X
 16. tBodyAccJerk-mean-Y
 17. tBodyAccJerk-mean-Z
 18. tBodyAccJerk-std-X
 19. tBodyAccJerk-std-Y
 20. tBodyAccJerk-std-Z
+- Time Body Gyroscope Measurements
 21. tBodyGyro-mean-X
 22. tBodyGyro-mean-Y
 23. tBodyGyro-mean-Z
 24. tBodyGyro-std-X
 25. tBodyGyro-std-Y
 26. tBodyGyro-std-Z
+- Time Body Gyroscope Jerk Measurements
 27. tBodyGyroJerk-mean-X
 28. tBodyGyroJerk-mean-Y
 29. tBodyGyroJerk-mean-Z
 30. tBodyGyroJerk-std-X
 31. tBodyGyroJerk-std-Y
 32. tBodyGyroJerk-std-Z
+- Time Body Accelerometer Magnitude Measurements
 33. tBodyAccMag-mean
 34. tBodyAccMag-std
+- Time Gravity Accelerometer Magnitude Measurements
 35. tGravityAccMag-mean
 36. tGravityAccMag-std
+- Time Body Accelerometer Jerk Magnitude Measurements
 37. tBodyAccJerkMag-mean
 38. tBodyAccJerkMag-std
+- Time Body Gyroscope Magnitude Measurements
 39. tBodyGyroMag-mean
 40. tBodyGyroMag-std
+- Time Body Jerk Gyroscope Magnitude Measurements
 41. tBodyGyroJerkMag-mean
 42. tBodyGyroJerkMag-std
+- Frequency Body Accelerometer Measurements
 43. fBodyAcc-mean-X
 44. fBodyAcc-mean-Y
 45. fBodyAcc-mean-Z
 46. fBodyAcc-std-X
 47. fBodyAcc-std-Y
 48. fBodyAcc-std-Z
+- Frequency Body Accelerometer Jerk Measurements
 49. fBodyAccJerk-mean-X
 50. fBodyAccJerk-mean-Y
 51. fBodyAccJerk-mean-Z
 52. fBodyAccJerk-std-X
 53. fBodyAccJerk-std-Y
 54. fBodyAccJerk-std-Z
+- Frequency Body Gyroscope Measurements
 55. fBodyGyro-mean-X
 56. fBodyGyro-mean-Y
 57. fBodyGyro-mean-Z
 58. fBodyGyro-std-X
 59. fBodyGyro-std-Y
 60. fBodyGyro-std-Z
+- Frequency Body Accelerometer Magnitude Measurements
 61. fBodyAccMag-mean
 62. fBodyAccMag-std
+- Frequency Body Accelerometer Jerk Magnitude Measurements
 63. fBodyBodyAccJerkMag-mean
 64. fBodyBodyAccJerkMag-std
+- Frequency Body Gyroscope Magnitude Measurements
 65. fBodyBodyGyroMag-mean
 66. fBodyBodyGyroMag-std
+- Frequency Body Gyroscope Jerk Magnitude Measurements
 67. fBodyBodyGyroJerkMag-mean
 68. fBodyBodyGyroJerkMag-std
 
