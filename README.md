@@ -47,7 +47,7 @@ I used the melt function to compress the dataset into a narrow form as this is t
 
 ## Cast the molten data
 1. I used the dcast function to reshape the molten dataset, and applied a mean aggregating function
-2. The resulting dimensions of the dataset is 180 x 68
+2. The resulting dimensions of the dataset is 180 x 81 (180 rows and 81 columns)
 
 
 ## Write out the tidy version
