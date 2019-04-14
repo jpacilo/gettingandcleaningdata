@@ -42,8 +42,10 @@ Write a script <run_analysis.R> capable of doing the following on the UCI HAR Da
 ## Variables
 The resulting tidy dataset has 180 observations and 68 variables. The first two features indicate the ID of the subject and the activity performed which are encoded as numbers. I have listed below all the variables in the tidy-ed dataset. All the features indicated below (aside from the first two) are measurements in terms of mean and standard deviation.
 
-1. Subject (The subject ID encoded from 1 to 30)
-2. Activity (The activity performed encoded from 1 to 6)
+(The subject ID encoded from 1 to 30)
+1. Subject 
+(The activity performed encoded from 1 to 6)
+2. Activity 
 3. tBodyAcc-mean-X
 4. tBodyAcc-mean-Y
 5. tBodyAcc-mean-Z
