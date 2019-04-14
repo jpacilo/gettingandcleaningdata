@@ -34,11 +34,12 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 ### THE VARIABLES
 The resulting tidy dataset has 180 observations and 81 variables. The first two columns indicate the ID of the subject and the activity performed. I have listed below all the variables in the tidy-ed dataset. All the features indicated below (aside from the first two) are measurements in terms of mean and standard deviation. I used the grep function in base R to isolate these measurements in terms of keyword.
 
-- The subject id encoded from 1 to 30
+
 1. Subject
-- The activity performed by the indidual encoded from 1 to 6.
-- The numeric factors to the literal names of the activities: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+- The subject id encoded from 1 to 30
 2. Activity
+- WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+
 - Time Domain Measurements
 3. timeDomainBodyAccelerometer-Mean-X
 4. timeDomainBodyAccelerometer-Mean-Y
@@ -80,6 +81,7 @@ The resulting tidy dataset has 180 observations and 81 variables. The first two 
 40. timeDomainBodyGyroscopeMagnitude-StandardDeviation
 41. timeDomainBodyGyroscopeJerkMagnitude-Mean
 42. timeDomainBodyGyroscopeJerkMagnitude-StandardDeviation
+
 - Frequency Domain Measurements
 43. frequencyDomainBodyAccelerometer-Mean-X
 44. frequencyDomainBodyAccelerometer-Mean-Y
