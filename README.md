@@ -1,5 +1,5 @@
 # gettingandcleaningdata
-Tidying up the UCI HAR Dataset
+Tidying up the Samsung UCI HAR Dataset
 
 Author: Joshua Paolo Acilo
 
