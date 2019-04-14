@@ -10,7 +10,7 @@ This codebook describes the data, the variables, and the transformations done on
 The link on the raw dataset (~60 MB) is found below:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-NOTE: Make sure the UCI HAR Dataset (folder) is in the working directory along with the script <run_analysis.R> 
+NOTE: Make sure the UCI HAR Dataset (folder) is in the working directory along with the script run_analysis.R 
 
 
 ### THE DATA
